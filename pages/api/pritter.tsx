@@ -27,7 +27,9 @@ export default async function handler(req: NextRequest) {
   }
   const username = searchParams.get("username") || "WISS2023 参加者";
   const userid = searchParams.get("userid") || "@wiss2023";
-  const date = new Date();
+  const date = new Date(
+    Date.now() + (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000
+  );
   const dateStr = formatterTime.format(date);
   const timeStr = formatterDate.format(date);
   const clientStr = "Pritter by Helpfeel";
