@@ -34,7 +34,7 @@ export default async function handler(req: NextRequest) {
   const date = new Date();
   const dateStr = formatterTime.format(date);
   const timeStr = formatterDate.format(date);
-  const clientStr = "Pritter from Helpfeel";
+  const clientStr = "Pritter by Helpfeel";
   const datetimeStr = `${dateStr} · ${timeStr} · ${clientStr}`;
 
   return new ImageResponse(
